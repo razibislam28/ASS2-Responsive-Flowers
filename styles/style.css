@@ -56,6 +56,54 @@
 .mobile-cart {
   display: none;
 }
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: #fff;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+.navbar .logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: orange;
+}
+.navbar .menu {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+/* Banner */
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+.banner-text {
+  flex: 1;
+}
+.banner-text h1 {
+  font-size: 4rem;
+}
+.banner-text .highlight {
+  color: #e95a08;
+  font-weight: bold;
+}
+.banner-text p {
+  color: #00000080;
+}
+.banner-img {
+  flex: 1;
+  text-align: center;
+}
+.banner-img img {
+  max-width: 100%;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -87,6 +135,13 @@
   }
 
   .nav {
-    height: 38px; /* matches design height */
+    height: 38px;
+  }
+  .banner {
+    flex-direction: column-reverse;
+    margin-top: 28px;
+  }
+  .banner-img {
+    margin-bottom: 28px;
   }
 }
