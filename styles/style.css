@@ -298,6 +298,86 @@
   line-height: 1.5;
 }
 
+.join {
+  background-image: url("../assets/news-letter-bg.png");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 533px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff; /* Text over image should be white */
+  padding: 2rem;
+  position: relative;
+}
+
+/* Optional overlay for readability */
+.join::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* soft overlay */
+  z-index: 0;
+}
+
+.join h2 {
+  color: #ffffff;
+  font-size: 50px;
+  font-weight: bold;
+  position: relative;
+  gap: 16px;
+  z-index: 1;
+  margin-bottom: 2rem;
+}
+
+/* Form Styling */
+.join-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  background: white;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  width: 750px;
+  height: 50px;
+}
+
+.join-form input {
+  background: rgb(245, 248, 255);
+  color: #00000080;
+  padding: 8px 20px 8px 20px;
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 1rem;
+  font-weight: 400;
+  min-width: 0;
+}
+
+.join-form button {
+  background: rgb(233, 90, 8);
+  border: none;
+  color: white;
+  padding: 26px 50px 26px 50px;
+  gap: 10;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.join-form button:hover {
+  background-color: #e6bc00ef;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   /* Hide menu items */
@@ -386,6 +466,25 @@
   }
 
   .badge {
-    display: none; /* Hide badge on small devices */
+    display: none;
+  }
+  /* form responsive */
+  .join-form {
+    width: 90%;
+    max-width: 100%;
+    height: auto;
+    flex-wrap: nowrap;
+  }
+
+  .join-form input {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    width: 60%;
+  }
+
+  .join-form button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    white-space: nowrap;
   }
 }
