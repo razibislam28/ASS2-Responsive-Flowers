@@ -309,20 +309,18 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #fff; /* Text over image should be white */
+  color: #fff;
   padding: 2rem;
   position: relative;
 }
 
-/* Optional overlay for readability */
 .join::before {
-  content: "";
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.2); /* soft overlay */
+  background-color: rgba(0, 0, 0, 0.2);
   z-index: 0;
 }
 
@@ -334,6 +332,78 @@
   gap: 16px;
   z-index: 1;
   margin-bottom: 2rem;
+}
+/* latest deals style */
+.deals-section {
+  max-width: 1280px;
+  margin: auto;
+  text-align: center;
+  margin: 110px auto;
+}
+
+.heading {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.heading span {
+  color: #e95a08;
+}
+
+.description {
+  color: #00000080;
+  font-size: 22px;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+.deals-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
+}
+
+.deal-card {
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 180px;
+  height: 100%;
+}
+
+.deal-card.large {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  min-height: 380px;
+}
+
+.deal-content {
+  width: 100%;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  text-align: center;
+}
+
+.deal-content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.deal-content a {
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 2px;
 }
 
 /* Form Styling */
@@ -490,23 +560,62 @@
     margin-bottom: 28px;
   }
   /* plant */
-  .plant-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+  .plants {
+    padding: 1rem;
+    margin: 60px 0;
   }
-  .plant-card h2 {
+
+  .plant-text {
+    margin: 30px 0;
+    gap: 12px;
+  }
+
+  .plant-text h2 {
     font-size: 32px;
+    text-align: center;
   }
+
   .plant-text p {
+    font-size: 18px;
     width: 100%;
+    height: auto;
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  .plant-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
+    gap: 10px;
+  }
+
+  .plant-card {
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .plant-card h3 {
+    font-size: 18px;
+    width: auto;
+    height: auto;
+  }
+
+  .plant-card p {
     font-size: 18px;
   }
+
   .plant-card img {
     width: 100%;
     height: auto;
+    margin: 10px 0;
   }
-  .plant-card {
-    padding: 10px;
+
+  .plant-card button {
+    padding: 12px 24px;
+    width: 100%;
+    height: auto;
+    font-size: 14px;
+    margin: 20px 0;
   }
   /* flower and lover */
   .plant-lover {
@@ -540,6 +649,34 @@
   .badge {
     display: none;
   }
+  /* latest deal responsive */
+  .heading {
+    font-size: 36px;
+  }
+
+  .description {
+    font-size: 18px;
+  }
+
+  .deals-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .deal-card {
+    min-height: 250px;
+  }
+
+  .deal-card.large {
+    grid-column: auto;
+    grid-row: auto;
+    min-height: 250px;
+  }
+
+  .deal-content h3 {
+    font-size: 1.2rem;
+  }
+
   /* form responsive */
   .join-form {
     width: 90%;
